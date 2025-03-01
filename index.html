@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebAR极简版</title>
+    <!-- 加载AR框架 -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0">
+    <!-- AR场景容器 -->
+    <a-scene embedded arjs="trackingMethod: best;">
+        <!-- 使用预设的Hiro标记 -->
+        <a-marker preset="hiro">
+            <!-- 蓝色立方体模型 -->
+            <a-box position="0 0.5 0" material="color: blue"></a-box>
+        </a-marker>
+        <!-- AR相机组件 -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
